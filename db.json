@@ -13,6 +13,97 @@
       "id": 4
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 10,
+      "title": "Hiking Trip",
+      "userId": 1
+    },
+    {
+      "userId": 1,
+      "title": "Oriental Cotton Gloves",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "title": "Practical Metal Salad",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "title": "Licensed Granite Table",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "title": "Gorgeous Bronze Ball",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "title": "Small Wooden Computer",
+      "id": 15
+    },
+    {
+      "userId": 3,
+      "title": "Elegant Bronze Towels",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "title": "Intelligent Soft Chicken",
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "title": "Recycled Concrete Ball",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "title": "Elegant Steel Towels",
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "title": "Recycled Soft Salad",
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "title": "Tasty Plastic Cheese",
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "title": "Awesome Bronze Bike",
+      "id": 22
+    },
+    {
+      "userId": 1,
+      "title": "Refined Frozen Salad",
+      "id": 23
+    },
+    {
+      "userId": 3,
+      "title": "Oriental Plastic Salad",
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "title": "Practical Wooden Shoes",
+      "id": 25
+    },
+    {
+      "userId": 1,
+      "title": "Luxurious Fresh Towels",
+      "id": 26
+    },
+    {
+      "userId": 1,
+      "title": "Modern Steel Bike",
+      "id": 27
+    }
+  ],
   "photos": []
 }
