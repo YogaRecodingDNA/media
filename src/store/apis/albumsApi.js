@@ -13,7 +13,7 @@ const albumsApi = createApi({ // returns set of auto generated hooks + a slice a
   reducerPath: 'albums',
   baseQuery: fetchBaseQuery({ // preconfigured version of fetch --> albumsApi.useFetchAlbumsQuery()
     baseUrl: 'http://localhost:3005',
-    fetchFn: async (...args) => {
+    fetchFn: async (...args) => { // Manipulate the RTKQ fetching function
       // Remove for production
       await pause(1000);
       return fetch(...args);
@@ -23,10 +23,15 @@ const albumsApi = createApi({ // returns set of auto generated hooks + a slice a
     return { // Configuration
       fetchAlbums: builder.query({ // Template decides name of hook
         providesTags: (result, error, user) => { // 3rd arg is whatever's passed to "THIS" hook
-          return [{ type: 'Album', id: user.id }];
+          const tags = result.map( album => {
+            return { type: 'Album', id: album.id };
+          });
+
+          tags.push({ type: 'UsersAlbums', id: user.id });
+          return tags;
         },
         query: (user) => { // user object / data from server / contains id, name, etc.
-          return {
+          return { // THE REQUEST-CONFIGURATION OBJECT
             url: '/albums', // path --> baseUrl/albums
             params: {
               userId: user.id
@@ -37,10 +42,10 @@ const albumsApi = createApi({ // returns set of auto generated hooks + a slice a
       }),
       addAlbum: builder.mutation({
         invalidatesTags: (result, error, user) => { // 3rd arg is whatever's passed to "THIS" hook
-          return [{ type: 'Album', id: user.id }];
+          return [{ type: 'UsersAlbums', id: user.id }];
         },
         query: (user) => {
-          return {
+          return { // THE REQUEST-CONFIGURATION OBJECT
             url: '/albums',
             method: 'POST',
             body: {
@@ -49,6 +54,17 @@ const albumsApi = createApi({ // returns set of auto generated hooks + a slice a
             }
           };
         }
+      }),
+      removeAlbum: builder.mutation({
+        invalidatesTags: (result, error, album) => { // 3rd arg is whatever's passed to "THIS" hook
+          return [{ type: 'Album', id: album.id }];
+        },
+        query: (album) => {
+          return { // THE REQUEST-CONFIGURATION OBJECT
+            url: `/albums/${album.id}`,
+            method: 'DELETE'
+          }
+        }
       })
     };
   },
@@ -56,6 +72,7 @@ const albumsApi = createApi({ // returns set of auto generated hooks + a slice a
 
 export const {
   useFetchAlbumsQuery,
-  useAddAlbumMutation
+  useAddAlbumMutation,
+  useRemoveAlbumMutation
 } = albumsApi;
 export { albumsApi };

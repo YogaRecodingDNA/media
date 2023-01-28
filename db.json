@@ -9,7 +9,7 @@
       "id": 3
     },
     {
-      "name": "Harold Strosin",
+      "name": "Louis Ondricka",
       "id": 4
     }
   ],
@@ -40,70 +40,36 @@
       "id": 14
     },
     {
-      "userId": 1,
-      "title": "Small Wooden Computer",
-      "id": 15
-    },
-    {
       "userId": 3,
       "title": "Elegant Bronze Towels",
       "id": 16
     },
     {
-      "userId": 1,
-      "title": "Intelligent Soft Chicken",
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "title": "Recycled Concrete Ball",
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "title": "Elegant Steel Towels",
-      "id": 19
-    },
-    {
-      "userId": 1,
-      "title": "Recycled Soft Salad",
-      "id": 20
-    },
-    {
-      "userId": 1,
-      "title": "Tasty Plastic Cheese",
-      "id": 21
-    },
-    {
-      "userId": 1,
-      "title": "Awesome Bronze Bike",
-      "id": 22
-    },
-    {
-      "userId": 1,
-      "title": "Refined Frozen Salad",
-      "id": 23
-    },
-    {
       "userId": 3,
       "title": "Oriental Plastic Salad",
       "id": 24
-    },
-    {
-      "userId": 1,
-      "title": "Practical Wooden Shoes",
-      "id": 25
-    },
-    {
-      "userId": 1,
-      "title": "Luxurious Fresh Towels",
-      "id": 26
-    },
-    {
-      "userId": 1,
-      "title": "Modern Steel Bike",
-      "id": 27
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=70731",
+      "id": 5
+    },
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=74355",
+      "id": 6
+    },
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=20210",
+      "id": 7
+    },
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=27752",
+      "id": 8
+    }
+  ]
 }
